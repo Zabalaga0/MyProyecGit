@@ -1,20 +1,67 @@
 TODO LO NECESARIO PARA PODER REALIZAR EL PROYECTO
 
-1. Instalar Python
-Descarga la última versión de Python 3.13.7 desde "https://www.python.org/downloads/"
-Marca la opción "Add Python to PATH" al instalar.
-Para comprobar:
-	python --version
+1. Instalar Python**********************************************************************
+Paso 1: Instalar dependencias necesarias
 
-2. Instalar Git
+Antes de compilar Python, es importante instalar las bibliotecas de desarrollo que necesita.
+Para la mayoría de las distribuciones basadas en Debian (como Ubuntu), usa este comando:
+Bash
+
+    sudo apt update
+    sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev
+
+Para distribuciones basadas en Red Hat (como Fedora o CentOS), usa este:
+Bash
+
+    sudo dnf install gcc openssl-devel bzip2-devel libffi-devel zlib-devel wget
+
+Paso 2: Descargar el código fuente de Python
+
+Necesitas descargar el código fuente de la versión que quieres, en este caso, la 3.13.7. Puedes encontrarlo en la página oficial de Python. Usa wget para descargarlo directamente:
+Bash
+
+    wget https://www.python.org/ftp/python/3.13.7/Python-3.13.7.tgz
+
+Una vez descargado, descomprímelo:
+Bash
+
+    tar -xf Python-3.13.7.tgz
+
+Paso 3: Compilar e instalar Python
+
+Ahora, navega al directorio del código fuente y ejecuta el siguiente comando. El flag --enable-optimizations hace que la instalación sea un poco más lenta, pero optimiza el rendimiento de Python.
+Bash
+
+    cd Python-3.13.7
+    ./configure --enable-optimizations
+
+Luego, usa make para compilar el código. El flag -j se usa para acelerar el proceso usando múltiples núcleos de tu CPU.
+Bash
+
+    make -j$(nproc)
+
+Finalmente, instala Python. Usa altinstall en lugar de install para evitar sobrescribir la versión de Python que ya tiene el sistema, lo cual podría causar problemas con programas del sistema que dependen de la versión preinstalada.
+Bash
+
+    sudo make altinstall
+
+Paso 4: Verificar la instalación
+
+Después de la instalación, verifica que la nueva versión esté disponible escribiendo el siguiente comando en la terminal:
+Bash
+
+    python3.13 --version
+
+
+2. Instalar Git**********************************************************************
 Te servirá para manejar versiones y trabajar con repositorios (por ejemplo en GitHub).
 Descarga desde "https://git-scm.com/"
 Comprueba con:
 	git --version
 
-3. Crear un entorno virtual
+3. Crear un entorno virtual**********************************************************************
 Esto es importante para mantener las librerías ordenadas en cada proyecto:
-	python -m venv venv
+	python3.13 -m venv venv
 
 Y luego activarlo:
 	En Windows:
@@ -23,7 +70,7 @@ Y luego activarlo:
 	En Linux/Mac:
 		source venv/bin/activate
 
-4. Instalar extensiones en VS Code
+4. Instalar extensiones en VS Code**********************************************************************
 Abre VS Code y agrega:
 
 Python (de Microsoft) → soporte completo para Python.
@@ -31,13 +78,26 @@ Pylance → autocompletado más inteligente.
 GitLens → ayuda con Git.
 REST Client (opcional) → para probar tus APIs directamente en VS Code.
 
-5. Instalar dependencias del proyecto
+5. Instalar dependencias del proyecto**********************************************************************
+ANTES, hay que usar los comandos para entrar al entorno virtual para trabajar con la version de python que queremos
+ en cualquier proyecto...
+DENTRO DEL REPO
+        python3.13 -m venv venv
+//EN LINUX
+        source venv/bin//activate
+//EN WINDOWS
+        venv\Scripts\activate
+Y RECIEN:
 Dependerá de qué quieras hacer. Para backend con "FastAPI" (rápido y moderno):
 	pip install fastapi uvicorn
 Y si quieres manejar base de datos (ejemplo: SQLite con SQLAlchemy):
 	pip install sqlalchemy
 
-ESTRUCTURA DEL PROYECTO:
+
+
+
+
+*************************ESTRUCTURA DEL PROYECTO:*************************
 mi_proyecto/
 │── README.md               # Documentación del proyecto
 │── requirements.txt        # Librerías que vas a usar
