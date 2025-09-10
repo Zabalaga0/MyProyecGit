@@ -1,1 +1,1 @@
-
+fastapi\nuvicorn\nsqlalchemy\nalembic\npydantic\npython-jose\npasslib\npytest
