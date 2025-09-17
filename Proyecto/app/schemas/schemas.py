@@ -1,1 +1,17 @@
 # Aquí los esquemas Pydantic para validación
+from pydantic import BaseModel
+
+class ProductBase(BaseModel):
+    name: str
+    brand: str
+    price: float
+    stock: int
+
+class ProductCreate(ProductBase):
+    pass
+
+class ProductResponse(ProductBase):
+    id: int
+
+    class Config:
+        orm_mode = True
