@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from .db.connection import Base, engine
+from app.db.connection import Base, engine
 from app.interfaces import product_routes
 
 # Crear las tablas si no existen
