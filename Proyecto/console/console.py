@@ -4,11 +4,14 @@ import requests
 API_URL = "http://127.0.0.1:8000/api/products/"
 
 def menu():
+    print("===============================================")
     print("\n--- Sistema de Gestión de Productos ---")
     print("1. 📝 Listar productos")
     print("2. 🛒 Agregar producto")
     print("3. 💣 Eliminar producto")
     print("4. 🗿 Salir")
+    print("===============================================")
+    
 
 def list_products():
     response = requests.get(API_URL)
@@ -55,3 +58,37 @@ def add_product():
     else:
         print("❌ Error al agregar producto")
         print(response.text)
+
+def delete_product():
+    product_id = input("ID del producto a eliminar: ")
+    try:
+        product_id = int(product_id)
+    except ValueError:
+        print("❌ El ID debe ser un número entero")
+        return
+    url = f"{API_URL.rstrip('/')}/{product_id}"
+    response = requests.delete(url)
+    if response.status_code == 200:
+        print("Producto eliminado")
+    else:
+        print("Error al eliminar producto")
+        print(response.text)
+
+def run():
+    while True:
+        menu()
+        option = input("Selecciona una opción📌: ")
+        if option == "1":
+            list_products()
+        elif option == "2":
+            add_product()
+        elif option == "3":
+            delete_product()
+        elif option == "4":
+            print("Saliendo...")
+            break
+        else:
+            print("Opción inválida")
+
+if __name__ == "__main__":
+    run()
