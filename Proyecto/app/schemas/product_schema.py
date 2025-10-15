@@ -1,4 +1,4 @@
-# Aquí los esquemas Pydantic para validación
+# app/schemas/product_schema.py
 from pydantic import BaseModel
 
 class ProductBase(BaseModel):
@@ -6,6 +6,7 @@ class ProductBase(BaseModel):
     brand: str
     price: float
     stock: int
+    payment_method: str  # nuevo campo agregado
 
 class ProductCreate(ProductBase):
     pass
