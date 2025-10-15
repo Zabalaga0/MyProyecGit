@@ -10,3 +10,4 @@ class Product(Base):
     brand = Column(String, nullable=False)
     price = Column(Float, nullable=False)
     stock = Column(Integer, nullable=False, default=0)
+    payment_method = Column(String, nullable=False, default="Efectivo")  # 💳 nuevo campo
