@@ -1,6 +1,7 @@
 # Mi primer Proyecto en Git
 Tema del Proyecto: Sistema de Gestion de Productos de una tienda 
 # Estructura del proyecto
+```powershell
 *PROYECTO
    *app
    |   *db
@@ -28,6 +29,7 @@ Tema del Proyecto: Sistema de Gestion de Productos de una tienda
    *README.md
    *requirements.txt
    *test.db
+```
 ## Raíz del Proyecto
 .gitignore
 Lista archivos y carpetas que Git debe ignorar (por ejemplo, __pycache__, bases de datos locales, etc.).
