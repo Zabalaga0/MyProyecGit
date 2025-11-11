@@ -77,7 +77,7 @@ Este comando inicia el servidor de desarrollo de FastAPI usando Uvicorn.
 
 Visita el enlace:
 
-**http://127.0.0.1:8000/doc**
+**http://127.0.0.1:8000/docs**
 
 **¿Qué es y para qué sirve?**  
 Este enlace abre la documentación interactiva de tu API generada automáticamente por FastAPI. Aquí puedes probar los endpoints de la API desde el navegador.
