@@ -7,3 +7,5 @@ python-jose
 passlib
 pytest
 requests
+textual
+rich
