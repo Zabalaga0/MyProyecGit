@@ -1,12 +1,13 @@
-# app/schemas/product_schema.py
 from pydantic import BaseModel
+from datetime import date
 
 class ProductBase(BaseModel):
     name: str
     brand: str
     price: float
     stock: int
-    payment_method: str  # nuevo campo agregado
+    payment_method: str
+    expiration_date: date | None = None  #Campo opcional
 
 class ProductCreate(ProductBase):
     pass

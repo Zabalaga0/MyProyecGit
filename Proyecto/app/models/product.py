@@ -1,5 +1,5 @@
 # Aquí van los modelos (tablas SQLAlchemy)
-from sqlalchemy import Column, Integer, String, Float
+from sqlalchemy import Column, Integer, String, Float, Date
 from app.db.connection import Base
 
 class Product(Base):
@@ -10,4 +10,5 @@ class Product(Base):
     brand = Column(String, nullable=False)
     price = Column(Float, nullable=False)
     stock = Column(Integer, nullable=False, default=0)
-    payment_method = Column(String, nullable=False, default="Efectivo")  # 💳 nuevo campo
+    payment_method = Column(String, nullable=False, default="Efectivo")
+    expiration_date = Column(Date, nullable=True)  # Nueva columna 
