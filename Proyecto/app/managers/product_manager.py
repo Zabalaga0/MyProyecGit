@@ -16,6 +16,7 @@ def create_product(db: Session, product: ProductCreate):
     db.refresh(new_product)
     return new_product
 
+
 def update_product(db: Session, product_id: int, updated_data: ProductCreate):
     product = get_product_by_id(db, product_id)
     if not product:
