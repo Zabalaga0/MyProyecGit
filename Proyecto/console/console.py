@@ -122,7 +122,7 @@ def update_product():
         print("❌ Error al actualizar producto.")
         print(response.text)
 
-# -----------------------------------------------------
+# ----------------------------------------------------
 # metodo para eliminar un producto de la API REST 
 def delete_product():
     print("\n--- 💣 Eliminar Producto ---")
