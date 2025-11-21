@@ -1,4 +1,6 @@
-# console/console.py
+
+
+#mejorar el proyecto usando buenas practicas# console/console.py
 import requests # hace que podamos hacer solicitudes HTTP a la API REST 
 from datetime import datetime, timedelta # esto nos sirve para manjerar fechas
 
