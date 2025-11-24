@@ -20,7 +20,7 @@ def run():
                 if not personas:
                     print("(sin personas)")
                 for p in personas:
-                    print(f"{{p.id}}: {{p.nombre}} ({{p.edad}})")
+                    print(f"{p.id}: {p.nombre} ({p.edad})")
             elif cmd == "agregar":
                 nombre = prompt("Nombre: ").strip()
                 edad = prompt("Edad: ").strip()

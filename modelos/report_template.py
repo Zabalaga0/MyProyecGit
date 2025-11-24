@@ -32,5 +32,5 @@ class PersonaReport(ReportTemplate):
         personas = self.manager.listar()
         if not personas:
             return "(sin personas)"
-        lines = [f"{{p.id}}: {{p.nombre}} ({{p.edad}})" for p in personas]
+        lines = [f"{p.id}: {p.nombre} ({p.edad})" for p in personas]
         return "\n".join(lines)

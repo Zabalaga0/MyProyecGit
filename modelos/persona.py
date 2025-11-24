@@ -9,4 +9,4 @@ class Persona(Base):
     edad = Column(Integer, nullable=False)
 
     def __repr__(self):
-        return f"<Persona id={{self.id}} nombre={{self.nombre}} edad={{self.edad}}>"]
+        return f"<Persona id={self.id} nombre={self.nombre} edad={self.edad}>"
