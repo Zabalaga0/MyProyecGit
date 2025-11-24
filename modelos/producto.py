@@ -12,4 +12,4 @@ class Producto(Base):
     fecha_vencimiento = Column(Date, nullable=True)
 
     def __repr__(self):
-        return f"<Producto id={{self.id}} nombre={{self.nombre}} precio={{self.precio}} cant={{self.cantidad}} venc={{self.fecha_vencimiento}}>
+        return f"<Producto id={self.id} nombre={self.nombre} precio={self.precio} cant={self.cantidad} venc={self.fecha_vencimiento}>"
