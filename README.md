@@ -22,7 +22,7 @@ en Windows
 3. 
 ```powershell
 pip install -r requirements.txt
-```powershell
+```
 ### EJECUCIONES
 Ejecutar consola:
 ```powershell
