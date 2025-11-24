@@ -1,0 +1,1 @@
+This folder is a backup of the original Proyecto directory from the repository. It was moved here during the refactor to preserve original files. Inspect and recover any needed files from here.

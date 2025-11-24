@@ -16,21 +16,18 @@ class ReportTemplate(ABC):
 
     @abstractmethod
     def _cuerpo(self) -> str:
-        """Implementado por subclases: cómo obtener y formatear los datos"""
         pass
 
     def _pie(self) -> str:
         return "=== FIN DEL REPORTE ==="
 
-class PersonaReport(ReportTemplate):
-    """Implementación concreta de ReportTemplate para listar personas."""
-
-    def __init__(self, persona_manager):
-        self.manager = persona_manager
+class ProductoReport(ReportTemplate):
+    def __init__(self, producto_manager):
+        self.manager = producto_manager
 
     def _cuerpo(self) -> str:
-        personas = self.manager.listar()
-        if not personas:
-            return "(sin personas)"
-        lines = [f"{p.id}: {p.nombre} ({p.edad})" for p in personas]
+        productos = self.manager.listar()
+        if not productos:
+            return "(sin productos)"
+        lines = [f"{p.id}: {p.nombre} ({p.cantidad}) - {p.precio}" for p in productos]
         return "\n".join(lines)
