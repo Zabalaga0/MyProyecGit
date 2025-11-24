@@ -1,1 +1,1 @@
-This folder is a backup of the original Proyecto directory from the repository. It was moved here during the refactor to preserve original files. Inspect and recover any needed files from here.
+Esta carpeta es una copia de seguridad del directorio original del Proyecto del repositorio. Se trasladó aquí durante la refactorización para preservar los archivos originales. Inspeccione y recupere los archivos necesarios desde aquí.
