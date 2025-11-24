@@ -40,8 +40,19 @@ python -m vistas.tui.main
 
 Correr tests:
 ```powershell
+set PYTHONPATH=%cd%
 pytest -q
 ```
+
+PYTHONPATH es una variable de entorno que le dice a Python dónde buscar módulos y paquetes (además de las rutas usuales).
+
+%cd% significa Current Directory → la carpeta donde estás parado actualmente.
+
+Por lo tanto este comando le dice a Python:
+
+“Agrega la carpeta actual (MyProyecGit) a las rutas donde puedes buscar módulos.”
+
+### El comando set PYTHONPATH=%cd% le indicó a Python dónde buscar los módulos.
 
 Ejecutar web:
 - python -m vistas.web.app
