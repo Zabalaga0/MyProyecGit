@@ -10,24 +10,43 @@ Estructura propuesta:
 - tests/: pruebas con pytest.
 
 Instalación:
-1. python -m venv venv
-2. source venv/bin/activate  # o venv\Scripts\activate en Windows
-3. pip install -r requirements.txt
-
+1. 
+```powershell
+python -m venv venv
+```
+2. source venv/bin/activate  # o 
+```powershell
+venv\Scripts\activate
+```
+en Windows
+3. 
+```powershell
+pip install -r requirements.txt
+```powershell
+### EJECUCIONES
 Ejecutar consola:
-- python -m vistas.consola.main --list
-- python -m vistas.consola.main --add "Pedro" 40
+```powershell
+python -m vistas.consola.main
+```
 
 Ejecutar TUI:
-- pip install prompt_toolkit
-- python -m vistas.tui.main
+```powershell
+pip install prompt_toolkit
+```
+ejecutar
+```powershell
+python -m vistas.tui.main
+```
+
+Correr tests:
+```powershell
+pytest -q
+```
 
 Ejecutar web:
 - python -m vistas.web.app
   Abrir http://127.0.0.1:5000
 
-Correr tests:
-- pytest -q
 
 Notas:
 - Se usa SQLAlchemy como ORM para mapear clases a tablas.
