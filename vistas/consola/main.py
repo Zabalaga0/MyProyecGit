@@ -74,7 +74,7 @@ def eliminar(manager):
     print("Eliminado." if ok else "No existe.")
 
 def ver_vencer(manager):
-    dias_s = input("Ver próximos a vencer en cuántos días? (default 30): ").strip()
+    dias_s = input("Ver próximos a vencer en cuántos días? (por defecto 30): ").strip()
     dias = int(dias_s) if dias_s else 30
     lista = manager.proximos_a_vencer(dias=dias)
     if not lista:
