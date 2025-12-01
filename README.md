@@ -65,5 +65,5 @@ El comando set PYTHONPATH=%cd% le indicó a Python dónde buscar los módulos.
 Notas:
 - Se usa SQLAlchemy como ORM para mapear clases a tablas.
 - Template Method: modelos/report_template.py (PersonaReport).
-- Los managers exponen insertar, buscar, listar, encontrar y borrar, tal como exige tu docente.
+- Los managers exponen insertar, buscar, listar, encontrar y borrar.
 - CI sugerido: añadir un workflow que ejecute pytest y flake8 en cada PR.
