@@ -30,10 +30,11 @@ python -m vistas.consola.main
 ```
 
 Ejecutar TUI:
+primero tenemos que instalar la libreria necesaria:
 ```powershell
 pip install prompt_toolkit
 ```
-ejecutar
+EJECUTAR TUI:
 ```powershell
 python -m vistas.tui.main
 ```
@@ -52,10 +53,12 @@ Por lo tanto este comando le dice a Python:
 
 “Agrega la carpeta actual (MyProyecGit) a las rutas donde puedes buscar módulos.”
 
-### El comando set PYTHONPATH=%cd% le indicó a Python dónde buscar los módulos.
+El comando set PYTHONPATH=%cd% le indicó a Python dónde buscar los módulos.
 
-Ejecutar web:
-- python -m vistas.web.app
+### Ejecutar web:
+```powershell
+  python -m vistas.web.app
+```
   Abrir http://127.0.0.1:5000
 
 
